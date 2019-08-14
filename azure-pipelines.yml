@@ -42,5 +42,5 @@ steps:
     replaceExistingArchive: true
 - task: PublishPipelineArtifact@1
   inputs:
-    path: $(Agent.HomeDirectory)
+    path: $(System.DefaultWorkingDirectory)/bin/WebApp
     artifact: drop
