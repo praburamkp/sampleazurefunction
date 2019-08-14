@@ -40,3 +40,7 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Agent.HomeDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+- task: PublishPipelineArtifact@2
+  inputs:
+    path: $(Agent.HomeDirectory)
+    artifact: drop
